@@ -1,6 +1,15 @@
+import Chart from '../components/chart/Chart'
+
 const Home = () => {
   return (
-    <div>Home</div>
+    <main className="home">
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+      <Chart />
+    </main>
   )
 }
 

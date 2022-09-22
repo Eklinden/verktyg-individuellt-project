@@ -1,0 +1,40 @@
+@import "../scss/Variables.scss";
+
+// CSS reset
+
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+// General settings
+
+h1 {
+    font-size: var(--fs-header);
+    color: $black-color;
+    font-family: "calibri";
+    margin: 0;
+}
+
+h2, h3 {
+    font-size: var(--fs-semi-header);
+    color: $black-color;
+    font-family: "calibri";
+    margin: 0;
+}
+
+p, a {
+    font-size: var(--fs-text);
+    text-decoration: none;
+    color: $black-color;
+    font-family: "calibri";
+}
+
+.App {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
