@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import './App.css'
+import { Route, Routes } from 'react-router-dom'
+import './App.scss'
+import AddScore from './views/AddScore'
+import Home from './views/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='AddScore' element={<AddScore />} />
+      </Routes>
     </div>
   )
 }
