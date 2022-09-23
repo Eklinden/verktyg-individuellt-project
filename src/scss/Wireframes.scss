@@ -14,23 +14,24 @@ body, html {
 
 h1 {
     font-size: var(--fs-header);
-    color: $black-color;
-    font-family: "calibri";
-    margin: 0;
+    @extend %text-css;
 }
-
 h2, h3 {
     font-size: var(--fs-semi-header);
-    color: $black-color;
-    font-family: "calibri";
-    margin: 0;
+    @extend %text-css;
 }
-
 p, a {
     font-size: var(--fs-text);
     text-decoration: none;
-    color: $black-color;
-    font-family: "calibri";
+    @extend %text-css;
+}
+
+select {
+    background: none;
+    border: none;
+    font-size: var(--fs-semi-header);
+    text-decoration: none;
+    @extend %text-css;
 }
 
 .App {

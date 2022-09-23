@@ -16,7 +16,7 @@ const Header = () => {
                 <h2>Padel Tracker</h2>
             </div>
             <nav>
-                <Link to="/">Hemskärm</Link>
+                <Link className="home-button" to="/">Hemskärm</Link>
                 <Link className="add-score" to="/AddScore">Lägg till resultat <img src={plus} alt="" /></Link>
             </nav>
         </section>
