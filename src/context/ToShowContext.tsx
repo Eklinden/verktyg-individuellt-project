@@ -1,6 +1,7 @@
 import { createContext, useContext, useState } from 'react';
 import { Games, Player, PlayerData } from '../models/data';
 import { GamesContext } from './GamesContext';
+
 export const ToShowContext = createContext<any | null>(null);
 
 const ToShowContextProvider = (props:any) => {
@@ -19,7 +20,7 @@ const ToShowContextProvider = (props:any) => {
             wins: 0,
             losses: 0,
             matches: 0,
-            playerID: 0
+            ID: 0
         };
         let playerExists = false;
 
@@ -35,7 +36,7 @@ const ToShowContextProvider = (props:any) => {
                         wins: 0,
                         losses: 1,
                         matches: 1,
-                        playerID: 0
+                        ID: 0
                     }
                     allPlayerData.push(playerObj);
                 } else {
@@ -44,7 +45,7 @@ const ToShowContextProvider = (props:any) => {
                         wins: 1,
                         losses: 0,
                         matches: 1,
-                        playerID: 0
+                        ID: 0
                     }
                     allPlayerData.push(playerObj);
                 }
@@ -68,7 +69,7 @@ const ToShowContextProvider = (props:any) => {
                             wins: 0,
                             losses: 1,
                             matches: 1,
-                            playerID: allPlayerData.length
+                            ID: allPlayerData.length
                         }
                         allPlayerData.push(playerObj);
                     } else {
@@ -77,7 +78,7 @@ const ToShowContextProvider = (props:any) => {
                             wins: 1,
                             losses: 0,
                             matches: 1,
-                            playerID: allPlayerData.length
+                            ID: allPlayerData.length
                         }
                         allPlayerData.push(playerObj);
                     } 

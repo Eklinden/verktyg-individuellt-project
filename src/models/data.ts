@@ -7,7 +7,7 @@ export interface Games {
     date: string;
     result: string;
     players: Player[];
-    gameID: number;
+    ID: number;
 }
 
 export interface PlayerData {
@@ -15,5 +15,16 @@ export interface PlayerData {
     wins: number;
     losses: number;
     matches: number;
-    playerID: number;
+    ID: number;
+}
+
+export interface FormData {
+    game: boolean;
+    date: string;
+    playerOne: string;
+    playerTwo: string;
+    playerThree: string;
+    playerFour: string;
+    teamOne: number;
+    teamTwo: number;
 }

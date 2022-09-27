@@ -1,14 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
-import GameList from '../../components/chart/GameList';
+import GameList from '../../components/GameList/GameList';
 import { ToShowContext } from '../../context/ToShowContext';
 import { Games, PlayerData } from '../../models/data';
 import './Home.scss';
-
-interface Props {
-  games: Games;
-  whatToSHow: Games[] | PlayerData[];
-  selectValue: boolean;
-}
 
 const Home = () => {
   const {showAllMatches, showAllPlayers, whatToShow} = useContext(ToShowContext);
@@ -27,37 +21,39 @@ const Home = () => {
       showAllPlayers();
     }
   }, [selectValue])
-
+  // console.log(whatToShow)
   return (
     <main className="home">
       <select className="home-select" onChange={(e) => toggleGamesToShow()}>
         <option value="games">Alla Matcher</option>
         <option value="players">Alla Spelare</option>
       </select>
-      <table>
-          <thead>
-            {
-              selectValue? (
-              <tr>
-                <th>Lag</th>
-                <th>Resultat</th>
-                <th>Datum</th>
-              </tr>
-              ):(
-              <tr>
-                <th>Namn</th>
-                <th>Vinster</th>
-                <th>Matcher</th>
-              </tr>
-              )
-            }
-          </thead>
-          {
-            whatToShow.map((toShow:Games | PlayerData) => {
-              <GameList toShow={toShow} selectValue={selectValue} />
-            })
-          }
-      </table>
+      <article className="list">
+        {
+          selectValue? (
+          <section className="list-head">
+            <div>
+              <p>Lag</p>
+            </div>
+            <p>Resultat</p>
+            <p>Datum</p>
+            <div></div>
+          </section>
+          ):(
+          <section className="list-head">
+            <div>
+              <p>Namn</p>
+            </div>
+            <p>Vinster</p>
+            <p>Matcher</p>
+            <div></div>
+          </section>
+          )
+        }
+        {
+          whatToShow.map((toShow:Games | PlayerData) => <GameList key={toShow.ID} toShow={toShow} selectValue={selectValue} />)
+        }
+      </article>
     </main>
   )
 }

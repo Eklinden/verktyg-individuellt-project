@@ -1,5 +1,5 @@
-import { createContext, useContext, useState } from 'react';
-import { Games, Player, PlayerData } from '../models/data';
+import { createContext, useState } from 'react';
+import { Games } from '../models/data';
 export const GamesContext = createContext<any | null>(null);
 
 const GamesContextProvider = (props:any) => {
@@ -14,7 +14,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 0
+            ID: 0
         },
         {
             game: "double",
@@ -26,7 +26,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Malin", result: "Lost" },
             ],
-            gameID: 1
+            ID: 1
         },
         {
             game: "double",
@@ -38,7 +38,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 2
+            ID: 2
         },
         {
             game: "double",
@@ -50,7 +50,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 3
+            ID: 3
         },
         {
             game: "double",
@@ -62,7 +62,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 4
+            ID: 4
         },
         {
             game: "double",
@@ -74,7 +74,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 5
+            ID: 5
         },
         {
             game: "double",
@@ -86,7 +86,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 6
+            ID: 6
         },
         {
             game: "double",
@@ -98,7 +98,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 7
+            ID: 7
         },
         {
             game: "double",
@@ -110,7 +110,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 8
+            ID: 8
         },
         {
             game: "double",
@@ -122,7 +122,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 9
+            ID: 9
         },
         {
             game: "double",
@@ -134,7 +134,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 10
+            ID: 10
         },
         {
             game: "double",
@@ -146,7 +146,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 11
+            ID: 11
         },
         {
             game: "double",
@@ -158,7 +158,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 12
+            ID: 12
         },
         {
             game: "double",
@@ -170,7 +170,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 13
+            ID: 13
         },
         {
             game: "double",
@@ -182,7 +182,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 14
+            ID: 14
         },
         {
             game: "double",
@@ -194,7 +194,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 15
+            ID: 15
         },
         {
             game: "double",
@@ -206,7 +206,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 16
+            ID: 16
         },
         {
             game: "double",
@@ -218,7 +218,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 17
+            ID: 17
         },
         {
             game: "double",
@@ -230,7 +230,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 18
+            ID: 18
         },
         {
             game: "double",
@@ -242,7 +242,7 @@ const GamesContextProvider = (props:any) => {
                { name: "Hans", result: "Lost" },
                { name: "Felicia", result: "Lost" },
             ],
-            gameID: 19
+            ID: 19
         }
     ])
 
