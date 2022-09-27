@@ -8,10 +8,13 @@ const Home = () => {
   const {showAllMatches, showAllPlayers, whatToShow, selectValue, setselectValue, mostWins, showTieGames} = useContext(ToShowContext);
   const [singleWins, setsingleWins] = useState<string>("")
   const [doubleWins, setdoubleWins] = useState<string>("")
+
   function toggleGamesToShow(e:string) {
     if(e === "games"){
+      showAllMatches();
       setselectValue(true)
     } else if(e === "players"){
+      showAllPlayers();
       setselectValue(false)
     } else if(e === "tie-games"){
       showTieGames()
@@ -30,7 +33,6 @@ const Home = () => {
         return 0;
       })
       const mostSingleWins = [...mostWins] 
-      console.log(mostSingleWins)
       mostSingleWins.sort((a: gameModeWins,b: gameModeWins ) => {
         if (a.singleWins < b.singleWins){
         return 1;
@@ -46,16 +48,7 @@ const Home = () => {
       }
   }, [mostWins])
   
-
-  useEffect(() => {
-    if(selectValue) {
-      showAllMatches();
-    }
-    else if (!selectValue) {
-      showAllPlayers();
-    }
-  }, [selectValue])
-  // console.log(whatToShow)
+  
   return (
     <main className="home">
       <select className="home-select" onChange={(e) => toggleGamesToShow(e.target.value)}>

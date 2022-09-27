@@ -46,7 +46,6 @@ const EditContextProvider = (props:any) => {
         editGame.playerFour = gameToEdit[0].players[3].name
         editGame.teamOne = parseInt(gameToEdit[0].result.slice(0,1))
         editGame.teamTwo = parseInt(gameToEdit[0].result.slice(2,3))
-        console.log(editGame)
         setformData(editGame)
     }
 

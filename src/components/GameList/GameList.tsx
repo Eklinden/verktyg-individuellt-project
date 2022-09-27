@@ -12,7 +12,7 @@ interface Props {
 
 const GameList = ({toShow}: Props) => {
     const {importGameData} = useContext(EditContext)
-    const {showPlayer, selectValue, setselectValue} = useContext(ToShowContext)
+    const {showPlayer, selectValue, setselectValue, whatToShow} = useContext(ToShowContext)
     const navigate = useNavigate()
     const [players, setplayers] = useState<Player[]>(toShow.players)
     const [teamOne, setteamOne] = useState<Player[]>([])
@@ -21,7 +21,7 @@ const GameList = ({toShow}: Props) => {
         if(toShow.players) {
             setplayers(toShow.players)
         }
-        console.log(toShow)
+        
     }, [toShow])
     
     useEffect(() => {
@@ -30,6 +30,11 @@ const GameList = ({toShow}: Props) => {
             setteamTwo(players.slice(2,4))
         }
     }, [players])
+    
+    useEffect(() => {
+
+    }, [whatToShow])
+    
     return (
         <section>
             {
