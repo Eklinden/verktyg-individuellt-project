@@ -90,7 +90,7 @@ const Home = () => {
           )
         }
         {
-          whatToShow.map((toShow:Games | PlayerData) => <GameList key={toShow.ID} toShow={toShow} toggleGamesToShow={toggleGamesToShow} />)
+          whatToShow.map((toShow:Games | PlayerData) => <GameList key={toShow.ID} toShow={toShow} />)
         }
       </article>
     </main>
