@@ -17,7 +17,7 @@ const Header = () => {
             </div>
             <nav>
                 <Link className="home-button" to="/">Hemskärm</Link>
-                <Link className="add-score" to="/AddScore">Lägg till resultat <img src={plus} alt="" /></Link>
+                <Link className="add-score" to="/addScore">Lägg till resultat <img src={plus} alt="" /></Link>
             </nav>
         </section>
     </header>

@@ -1,18 +1,14 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { EditContext } from "../../context/EditContext";
-import cross from "../../images/cross.svg";
+import { GamesContext } from "../../context/GamesContext";
 import { FormData } from "../../models/data";
 import "./Form.scss";
 
-interface Props {
-    formData: FormData;
-    gameMode: boolean;
-    setgameMode: any;
-    setformData: any;
-}
-
-const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
-    const {addGame} = useContext(EditContext)
+const Form = () => {
+    const navigate = useNavigate()
+    const {addGame, formData, setgameMode, gameMode, setformData} = useContext(EditContext)
+    const {games} = useContext(GamesContext)
 
     function toggleGameMode() {
         setgameMode(!gameMode)
@@ -21,6 +17,7 @@ const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
     function formSubmit(event: any) {
         event.preventDefault();
         addGame(formData)
+        navigate('/')
     }
     
     const changeForm = (event: any) => {
@@ -42,7 +39,7 @@ const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
             <label htmlFor="playerOne">Player 1</label>
             <input type="text" id="playerOne" onChange={changeForm} value={formData.playerOne} required/>
             {
-              gameMode? (
+              formData.game? (
                 <>
                   <label htmlFor="playerTwo">Player 2</label>
                   <input type="text" id="playerTwo" value={formData.playerTwo} onChange={changeForm}/>
@@ -55,7 +52,7 @@ const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
           <div className="team-input">
             <h3>lag 2</h3>
             {
-              gameMode? (
+              formData.game? (
                 <>
                   <label htmlFor="playerThree">Player 3</label>
                   <input type="text" id="playerThree" onChange={changeForm} value={formData.playerThree} required/>
@@ -77,7 +74,7 @@ const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
             <div>
               <label htmlFor="teamOne">Lag 1</label>
               <select id="teamOne" onChange={changeForm} value={formData.teamOne} required>
-                <option value="1">0</option>
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -86,7 +83,7 @@ const Form = ({formData, setformData, setgameMode, gameMode}: Props) => {
             <div>
               <label htmlFor="teamTwo">Lag 2</label>
               <select id="teamTwo" onChange={changeForm} value={formData.teamTwo} required>
-                <option value="1">0</option>
+                <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

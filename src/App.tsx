@@ -19,7 +19,7 @@ function App() {
             <Header />
             <Routes>
               <Route path='/' element={<Home />} />
-              <Route path='AddScore' element={<AddScore />} />
+              <Route path='addScore' element={<AddScore />} />
               <Route path='player' element={<Player />} />
             </Routes>
           </ToShowContextProvider>
