@@ -6,7 +6,7 @@ import { Games, Player, PlayerData } from '../../models/data';
 import './GameList.scss';
 
 interface Props {
-    toShow: Games | PlayerData;
+    toShow: any;
     selectValue ? : boolean;
 }
 

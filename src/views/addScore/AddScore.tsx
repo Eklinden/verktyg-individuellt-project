@@ -20,7 +20,7 @@ const AddScore = () => {
       <span className="return-btn" onClick={()=> navigate(-1)}>Gå tillbaka 
         <img src={cross} alt="" />
       </span>
-      <Form formData={formData} setformData={setformData} setgameMode={setgameMode} gameMode={gameMode} />
+      <Form />
     </main>
   )
 }

@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import "./scss/Wireframes.scss"
 import AddScore from './views/addScore/AddScore'
@@ -22,6 +23,7 @@ function App() {
               <Route path='addScore' element={<AddScore />} />
               <Route path='player' element={<Player />} />
             </Routes>
+            <Footer />
           </ToShowContextProvider>
         </EditContextProvider>
 
