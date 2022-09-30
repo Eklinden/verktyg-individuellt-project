@@ -25,13 +25,13 @@ const Player = () => {
       </section>
       <h2>Av de {selectedPlayer.matches < 10 ? (<>{selectedPlayer.matches}</>):(<>10</>)} senaste har {selectedPlayer.name} vunnit: {selectedPlayer.wins}</h2>
       <section className="list-head">
-        <div>
-          <p>Namn</p>
-        </div>
-        <p>Vinster</p>
-        <p>Matcher</p>
-        <div></div>
-      </section>
+            <div>
+              <p>Lag</p>
+            </div>
+            <p>Resultat</p>
+            <p>Datum</p>
+            <div></div>
+          </section>
 
       {
         whatToShow.map((toShow:Games | PlayerData, i: number) => {
